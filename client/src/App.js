@@ -19,11 +19,12 @@ const App = () => {
       <Route 
         exact
         path="/"
-        component={MovieList}/>
+        render={props => <MovieList {...props} />}
+      />
       <Route
         exact
-        path="/Movies/:id"
-        component={Movie}
+        path="/movie/:id"
+        render={props => <Movie {...props} />}
         />
     </div>
   );
